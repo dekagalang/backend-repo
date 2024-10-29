@@ -1,10 +1,10 @@
-import express from 'express';
-import { addUser, getUsers } from '../controller/api';
+import express from "express";
+import { addUser, getUsers } from "../controller/api";
+import authMiddleware from "../middleware/authMiddleware";
 
 const router = express.Router();
 
-// Define routes
-router.post('/add', addUser);
-router.get('/', getUsers);
+router.post("/add", authMiddleware, addUser);
+router.get("/", getUsers);
 
 export default router;
