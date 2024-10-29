@@ -1,8 +1,8 @@
 import admin from "firebase-admin";
-import firebase from "firebase/compat";
+require('dotenv').config();
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyCLweLaRJ_ckwb4XR8Dtyvl3LD_NYMgXVs",
+  apiKey: process.env.SECRET_KEY,
   authDomain: "ebuddy-dfdc5.firebaseapp.com",
   projectId: "ebuddy-dfdc5",
   storageBucket: "ebuddy-dfdc5.appspot.com",
