@@ -7,11 +7,7 @@ const port = 3000;
 
 app.use(bodyParser.json());
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello from Express and Firebase with TypeScript!");
-});
-
-app.use("/users", userRoutes);
+app.use("/", userRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
